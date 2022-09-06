@@ -1,11 +1,4 @@
-#model: https://github.com/kristpapadopoulos/seriesnet/blob/master/seriesnet.py
-#causalconv1: https://github.com/pytorch/pytorch/issues/1333
-
-# Layer-Wise Learning Rate in PyTorch: 
-#https://discuss.pytorch.org/t/different-learning-rate-for-a-specific-layer/33670/10
-#https://kozodoi.me/python/deep%20learning/pytorch/tutorial/2022/03/29/discriminative-lr.html
-#https://stackoverflow.com/questions/51801648/how-to-apply-layer-wise-learning-rate-in-pytorch
-
+#Code based on https://github.com/kristpapadopoulos/seriesnet/blob/master/seriesnet.py
 
 import torch
 import numpy as np
@@ -194,12 +187,10 @@ class CausalModel(pl.LightningModule):
         l1a, l1b = self.block_1(x_input,cond)
         l2a, l2b = self.block_2(l1a,cond)
 
-        #### parte modificada ###
         l3b = nn.Dropout(0.8)(l2b)
         l4a, l4b = self.block_3(l2a,cond)
         l4b = nn.Dropout(0.8)(l4b)
         l5 = l1b + l2b + l3b + l4b
-        #########################
 
         l6 = F.relu(l5)
         l6 = l6.permute(0,2,1).to(dev)
@@ -216,15 +207,13 @@ class CausalModel(pl.LightningModule):
         #[32, 6, 7], [32,5] => [32, 6, 7]
         ypred = self(target_in,condition)
 
-        #mae = mae_loss(ypred,target_out)
-        #mmd = mmd_loss(ypred,target_out)
+        mae = mae_loss(ypred,target_out)
+        mmd = mmd_loss(ypred,target_out)
         rmse = rmse_loss(ypred,target_out)
-        # dilate,loss_shape,loss_temporal = dilate_loss(ypred,target_out,batch_size=self.batch_size,
-        #                                              seq_length = self.output_seq_length,num_features=self.num_features,
-        #                                              alpha=self.alpha,gamma=self.gamma,device=self.device,
-        #                                              mask = "False")
-
-
+        dilate,loss_shape,loss_temporal = dilate_loss(ypred,target_out,batch_size=self.batch_size,
+                                                      seq_length = self.output_seq_length,num_features=self.num_features,
+                                                      alpha=self.alpha,gamma=self.gamma,device=self.device,
+                                                      mask = "False")
         self.log("loss",rmse, on_step=True, on_epoch=True, prog_bar=True, logger=True)
         return {"loss":rmse,"past":target_in,"ytrue":target_out,"ypred":ypred,"conditions":condition, "mask":mask}
 
@@ -261,8 +250,8 @@ class CausalModel(pl.LightningModule):
         target_mask = torch.masked_select(target_out, mask)
         #-----------------------------------------------------------#
 
-        #mae = mae_loss(ypred_mask,target_mask)
-        #mmd = mmd_loss(ypred_mask,target_mask)
+        mae = mae_loss(ypred_mask,target_mask)
+        mmd = mmd_loss(ypred_mask,target_mask)
         rmse = rmse_loss(ypred_mask,target_mask)
         dilate,loss_shape,loss_temporal = dilate_loss(ypred_mask,target_mask,batch_size=self.batch_size,
                                                       seq_length = self.output_seq_length,num_features=self.num_features,
@@ -325,13 +314,13 @@ class CausalModel(pl.LightningModule):
         target_mask = torch.masked_select(target_out, mask)
         #-----------------------------------------------------------#
 
-        #mae = mae_loss(ypred_mask,target_mask)
-        #mmd = mmd_loss(ypred_mask,target_mask)
+        mae = mae_loss(ypred_mask,target_mask)
+        mmd = mmd_loss(ypred_mask,target_mask)
         rmse = rmse_loss(ypred_mask,target_mask)
-        # dilate,loss_shape,loss_temporal = dilate_loss(ypred_mask,target_mask,batch_size=self.batch_size,
-        #                                               seq_length = self.output_seq_length,num_features=self.num_features,
-        #                                               alpha=self.alpha,gamma=self.gamma,device=self.device,
-        #                                               mask = "True")
+        dilate,loss_shape,loss_temporal = dilate_loss(ypred_mask,target_mask,batch_size=self.batch_size,
+                                                       seq_length = self.output_seq_length,num_features=self.num_features,
+                                                       alpha=self.alpha,gamma=self.gamma,device=self.device,
+                                                       mask = "True")
         self.log("test_loss",rmse)
         return {"test_loss":rmse}
 
