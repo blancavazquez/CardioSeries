@@ -31,7 +31,7 @@ class rnn(torch.nn.Module):
 
         self.dense = nn.Sequential(nn.Linear(5, output_rnn),nn.Mish(),nn.Dropout(p=0.8))
         self.rnn = nn.LSTM(input_size=self.num_features, hidden_size=50, num_layers=1,
-                            batch_first=True,bidirectional=True) #GRU
+                            batch_first=True,bidirectional=True)
 
     def forward(self, x_input, cond): #input: ([32, 6, 7]) cond: ([32, 5]) 
         
@@ -40,11 +40,7 @@ class rnn(torch.nn.Module):
 
         #[1,32,5] => [2,16,100]
         h0 = self.dense(cond)
-        h0 = h0.reshape(2,x_input.shape[0],-1) #[2,32,50]
-
-        #[32,6,7], [2,32,50] => [32,6,100]
-        #output, _ = self.rnn(x_input, h0) # para GRU
-
+        h0 = h0.reshape(2,x_input.shape[0],-1) #[2,32,50]    
         output, _ = self.rnn(x_input, (h0,h0)) # para LSTM
 
         return output
