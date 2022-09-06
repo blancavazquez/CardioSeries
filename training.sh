@@ -1,6 +1,3 @@
-#Source github: https://github.com/CVxTz/time_series_forecasting
-#source: https://towardsdatascience.com/how-to-use-transformer-networks-to-build-a-forecasting-model-297f9270e630
-
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "Pipeline for time series forecasting"
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
