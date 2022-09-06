@@ -1,3 +1,3 @@
 ## CardioSeries: multivariate time series forecasting model
 
-Code for generating of EHR synthetics
+This repository contains the code for generating of EHR synthetics based on dilated causal convolutional neural networks. 
