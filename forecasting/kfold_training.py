@@ -1,7 +1,3 @@
-#source: https://github.com/CVxTz/time_series_forecasting
-#source (kfold) https://github.com/Lightning-AI/lightning/blob/master/examples/pl_loops/kfold.py
-#source (colab) https://colab.research.google.com/drive/1ahc3n8i9ysnn0UppzdeD9KG3t1-8BpVF?usp=sharing#scrollTo=4Dk6Ykv8lI7X
-
 #------
 #super importante instalar: pip install https://github.com/PyTorchLightning/pytorch-lightning/archive/master.zip
 #------
@@ -116,7 +112,6 @@ class Dataset(torch.utils.data.Dataset):
         targets_out = targets_out.reshape(self.output_seq_length,self.num_features)
         targets_expected = torch.tensor(targets_out, dtype=torch.float) #torch.Size([6, 8])
 
-        #if self.saits_impute == "True":
         #Datos imputados con SAITS, incluye máscara
         df_mask = self.mask_saits.get_group(pid_patient)
         df_mask = df_mask[self.features]#[df_mask.columns[1:]]
