@@ -12,3 +12,11 @@ This repository is organized as follows:
 ## Requirements
 For imputation, we used the libraries of:
 - [Simple imputer](https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html)
+- [Iterative imputer](https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html)
+- [Interpolate](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.interpolate.html)
+- [KNNImputer](https://scikit-learn.org/stable/modules/generated/sklearn.impute.KNNImputer.html)
+- [Random](https://impyute.readthedocs.io/en/master/_modules/impyute/imputation/cs/random.html)
+- [MICE](https://impyute.readthedocs.io/en/master/_modules/impyute/imputation/cs/mice.html)
+- [Expectation - maximization.](https://impyute.readthedocs.io/en/master/_modules/impyute/imputation/cs/em.html)
+- [Moving_Window](https://impyute.readthedocs.io/en/master/_modules/impyute/imputation/ts/moving_window.html)
+- [Self-Attention-based Imputation for Time Series](https://github.com/WenjieDu/SAITS)
