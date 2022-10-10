@@ -18,6 +18,6 @@ For imputation, we used the libraries of:
 - [KNNImputer](https://scikit-learn.org/stable/modules/generated/sklearn.impute.KNNImputer.html)
 - [Random](https://impyute.readthedocs.io/en/master/_modules/impyute/imputation/cs/random.html)
 - [MICE](https://impyute.readthedocs.io/en/master/_modules/impyute/imputation/cs/mice.html)
-- [Expectation - maximization.](https://impyute.readthedocs.io/en/master/_modules/impyute/imputation/cs/em.html)
-- [Moving_Window](https://impyute.readthedocs.io/en/master/_modules/impyute/imputation/ts/moving_window.html)
+- [Expectation - maximization](https://impyute.readthedocs.io/en/master/_modules/impyute/imputation/cs/em.html)
+- [Moving window](https://impyute.readthedocs.io/en/master/_modules/impyute/imputation/ts/moving_window.html)
 - [Self-Attention-based Imputation for Time Series](https://github.com/WenjieDu/SAITS)
