@@ -1,6 +1,7 @@
 ## CardioSeries: a model for predicting multivariate time series
 
-This repository contains the code for early prediction of clinical behavior based on dilated causal convolutional neural networks (DCCNN). 
+This repository contains the code  for predicting multivariate time series based on dilated causal convolutional neural networks (DCCNN). 
+The application of this model is for early prediction of clinical behavior.
 
 ## Brief introduction
 This repository is organized as follows:
