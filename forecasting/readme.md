@@ -1,4 +1,4 @@
-* For training with kfolds
+* For training with kfolds:
 ```
-prueba
+bash training.sh 
 ```
