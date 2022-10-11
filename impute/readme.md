@@ -2,6 +2,6 @@
 
 1) Select clinical data without missing data
 
-´´´
+```
 python3 create_dataset.py
-´´´
+```
