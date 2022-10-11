@@ -16,3 +16,7 @@ bash training.sh
 ```
 bash testing.sh 
 ```
+4) For training the mortality prediction models on sets: TrainReal_TestReal, TrainSyn_TestReal, TrainReal_TestSyn. This command is excuted after of testing.
+
+python3 mortality.py
+```
