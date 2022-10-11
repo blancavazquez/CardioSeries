@@ -11,3 +11,8 @@ bash kfold_training.sh
 ```
 bash training.sh 
 ```
+
+3) For testing:
+```
+bash testing.sh 
+```
