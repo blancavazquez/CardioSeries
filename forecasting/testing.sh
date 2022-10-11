@@ -1,5 +1,4 @@
 # Author: Blanca Vázquez
-
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "Pipeline for time series forecasting (testing)"
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"                          
