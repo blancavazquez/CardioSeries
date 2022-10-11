@@ -1,5 +1,6 @@
 """
 Code for training model after hyperparameter selection
+Author: Blanca Vázquez
 """
 import os
 import datetime
