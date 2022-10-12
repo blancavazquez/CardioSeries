@@ -5,3 +5,8 @@
 ```
 python3 create_dataset.py
 ```
+2) Evaluate several imputation methods
+
+```
+python3 imputation.py
+```
