@@ -21,3 +21,8 @@ For imputation, we used the libraries of:
 - [Expectation - maximization](https://impyute.readthedocs.io/en/master/_modules/impyute/imputation/cs/em.html)
 - [Moving window](https://impyute.readthedocs.io/en/master/_modules/impyute/imputation/ts/moving_window.html)
 - [Self-Attention-based Imputation for Time Series](https://github.com/WenjieDu/SAITS)
+
+You can create a conda environment with all the dependencies using the environment.yml file in this repository.
+```
+conda env create cardioseries.yml
+```
