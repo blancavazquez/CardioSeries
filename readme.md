@@ -26,3 +26,8 @@ You can create a conda environment with all the dependencies using the environme
 ```
 conda env create cardioseries.yml
 ```
+## Citation:
+
+```
+B. Vazquez, “Modelos basados en aprendizaje de máquinas para el análisis de subpoblaciones de pacientes en registros clínicos electrónicos ,” Ph.D. dissertation, IIMAS, UNAM, Mexico, 2022 [URL](https://tesiunam.dgb.unam.mx/F/HBC87R6D53S5XAFSBKEAA7INY7SIHR4N3DGLCF4XCJK9LR76PU-26539?func=full-set-set&set_number=707136&set_entry=000006&format=999).
+```
