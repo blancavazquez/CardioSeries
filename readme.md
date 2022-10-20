@@ -29,5 +29,7 @@ conda env create cardioseries.yml
 ## Citation:
 
 ```
-B. Vazquez, “Modelos basados en aprendizaje de máquinas para el análisis de subpoblaciones de pacientes en registros clínicos electrónicos ,” Ph.D. dissertation, IIMAS, UNAM, Mexico, 2022.
+B. Vazquez, “Modelos basados en aprendizaje de máquinas para el análisis de subpoblaciones de 
+pacientes en registros clínicos electrónicos ,” 
+Ph.D. dissertation, IIMAS, UNAM, Mexico, 2022.
 ```
