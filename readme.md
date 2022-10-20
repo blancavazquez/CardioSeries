@@ -30,6 +30,6 @@ conda env create cardioseries.yml
 
 ```
 B. Vazquez, “Modelos basados en aprendizaje de máquinas para el análisis de subpoblaciones de 
-pacientes en registros clínicos electrónicos ,” 
-Ph.D. dissertation, IIMAS, UNAM, Mexico, 2022.
+pacientes en registros clínicos electrónicos,” Ph.D. dissertation, IIMAS, UNAM, Mexico, 2022.
 ```
+Thesis available at [URL](https://tesiunam.dgb.unam.mx/F/HBC87R6D53S5XAFSBKEAA7INY7SIHR4N3DGLCF4XCJK9LR76PU-26539?func=full-set-set&set_number=707136&set_entry=000006&format=999)
